@@ -20,12 +20,15 @@ function disable(btn){
     btn.setAttribute("disabled","disabled");
     btn.style.cursor="no-drop";
 }
+
 function enable(btn){
     btn.removeAttribute("disabled");
     btn.style.cursor="auto";
 }
+
 disable(btn2);
 disable(btn3);
+
 function start(){
     disable(btn1);
     enable(btn2);
@@ -41,6 +44,7 @@ function start(){
     }
     showTime();
 }
+
 function showTime(){
     let sec=0;let min=0;let hour=0;
     if(second<10){
@@ -63,6 +67,7 @@ function showTime(){
     }
     lable.innerHTML=hour+":"+min+":"+sec;
 }
+
 var temp=0;
 function pause(){
     btn2.innerHTML="continue";
@@ -70,6 +75,7 @@ function pause(){
     btn2.addEventListener("click",conti);
     clearInterval(startTimer);
 }
+
 function conti(){
     btn2.innerHTML="pause";
     btn2.removeEventListener("click",conti);
@@ -77,6 +83,7 @@ function conti(){
     startTimer=setInterval(start,1000);
     
 }
+
 function stop(){
     hours=0;minute=0;second=0;
     lable.innerHTML=""+0+hours+":"+0+minute+":"+0+second;
