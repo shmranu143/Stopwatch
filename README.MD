@@ -1,1 +1,1 @@
-This is stop watch
+This is stop watch.
